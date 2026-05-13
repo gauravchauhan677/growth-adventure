@@ -5,28 +5,28 @@ export const galleryData = [
     title: 'Mt. Shivling Expedition',
     category: 'expedition',
     tags: ['shivling', 'technical', 'alpine'],
-    imageUrl: '/images/expeditions/shivling.jpg'
+    imageUrl: '/images/expeditions/shivling2.jpg'
   },
   {
     id: 2,
     title: 'Auden\'s Col Expedition',
     category: 'expedition',
     tags: ['glacier', 'traverse', 'gangotri'],
-    imageUrl: '/images/expeditions/audens-col.jpg'
+    imageUrl: '/images/expeditions/audensCol.jpg'
   },
   {
     id: 3,
     title: 'Kalindi Khal Expedition',
     category: 'expedition',
     tags: ['khal', 'crossing', 'badrinath'],
-    imageUrl: '/images/expeditions/kalindi-khal.jpg'
+    imageUrl: '/images/expeditions/kalindi-khal1.jpg'
   },
   {
     id: 4,
     title: 'Meru Expedition (Shark\'s Fin)',
     category: 'expedition',
     tags: ['meru', 'technical', 'elite'],
-    imageUrl: '/images/expeditions/meru.jpg'
+    imageUrl: '/images/expeditions/meruExpedition.jpg'
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ export const galleryData = [
     title: 'Lamkhaga Pass Expedition',
     category: 'expedition',
     tags: ['lamkhaga', 'border', 'tibet'],
-    imageUrl: '/images/expeditions/lamkhaga.jpg'
+    imageUrl: '/images/expeditions/lamkhagaPass.jpg'
   },
   {
     id: 7,
@@ -49,83 +49,91 @@ export const galleryData = [
     tags: ['thalay', 'circuit', 'bhagirathi'],
     imageUrl: '/images/expeditions/thalay-sagar.jpg'
   },
+  {
+    id: 8,
+    title: 'Thalay Sagar Circuit',
+    category: 'expedition',
+    tags: ['thalay', 'circuit', 'bhagirathi'],
+    imageUrl: '/images/expeditions/bhagirathi2.jpg'
+  },
+
 
   // Trek entries (added)
   {
-    id: 8,
+    id: 9,
     title: 'Gaumukh Tapovan Trek',
     category: 'trek',
     tags: ['gaumukh', 'tapovan', 'shivling'],
-    imageUrl: '/images/treks/tapovan.jpg'
+    imageUrl: '/images/treks/gaumukhTapovan.jpg'
   },
   {
-    id: 9,
+    id: 10,
     title: 'Kedarkantha Trek',
     category: 'trek',
     tags: ['kedarkantha', 'winter', 'snow'],
     imageUrl: '/images/treks/kedarkantha.jpg'
   },
   {
-    id: 10,
+    id: 11,
     title: 'Kedartal Trek',
     category: 'trek',
     tags: ['kedartal', 'lake', 'glacier'],
     imageUrl: '/images/treks/kedartal.jpg'
   },
   {
-    id: 11,
+    id: 12,
     title: 'Kyarkoti Trek',
     category: 'trek',
     tags: ['kyarkoti', 'meadows', 'bandarpunch'],
     imageUrl: '/images/treks/kyarkoti.jpg'
   },
   {
-    id: 12,
+    id: 13,
     title: 'Dayara Bugyal Trek',
     category: 'trek',
     tags: ['dayara', 'bugyal', 'meadows'],
-    imageUrl: '/images/treks/dayara.jpg'
+    imageUrl: '/images/treks/dayara.webp'
   },
   {
-    id: 13,
+    id: 14,
     title: 'Gidara Bugyal Trek',
     category: 'trek',
     tags: ['gidara', 'high-altitude', 'wilderness'],
     imageUrl: '/images/treks/gidara.jpg'
   },
+  // {
+  //   id: 15,
+  //   title: 'Dodital Trek',
+  //   category: 'trek',
+  //   tags: ['dodital', 'lake', 'ganesha'],
+  //   imageUrl: '/images/treks/dodital.jpg'
+  // },
   {
-    id: 14,
-    title: 'Dodital Trek',
-    category: 'trek',
-    tags: ['dodital', 'lake', 'ganesha'],
-    imageUrl: '/images/treks/dodital.jpg'
-  },
-  {
-    id: 15,
+    id: 16,
     title: 'Nandanvan Trek',
     category: 'trek',
     tags: ['nandanvan', 'glacier', 'bhagirathi'],
     imageUrl: '/images/treks/nandanvan.jpg'
   },
   {
-    id: 16,
+    id: 17,
     title: 'Gaumukh Glacier Trek',
     category: 'trek',
     tags: ['gaumukh', 'glacier', 'ganges'],
-    imageUrl: '/images/treks/gaumukh.jpg'
-  },
-  {
-    id: 17,
-    title: 'Sat Tal Trek',
-    category: 'trek',
-    tags: ['sat-tal', 'lakes', 'panoramic'],
-    imageUrl: '/images/treks/sat-tal.jpg'
+    imageUrl: '/images/treks/gaumukhGlacier.jpg'
   },
   {
     id: 18,
+    title: 'Sat Tal Trek',
+    category: 'trek',
+    tags: ['sat-tal', 'lakes', 'panoramic'],
+    imageUrl: '/images/treks/sattal.jpg'
+  },
+  {
+    id: 19,
     title: 'Dodital Darwa Pass Trek',
     category: 'trek',
     tags: ['dodital', 'darwa-pass', 'challenging'],
-    imageUrl: '/images/treks/dodital-darwa.jpg'
+    imageUrl: '/images/treks/doditalDarwaPass.jpg'
   }
 ];
