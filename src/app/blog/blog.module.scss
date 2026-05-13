@@ -1,0 +1,614 @@
+// blog.module.scss
+// Color palette
+$primary: #3a5a78; // Deep ocean blue
+$secondary: #588157; // Forest green
+$accent: #e07a5f; // Terra cotta
+$dark: #2d3436; // Charcoal
+$light: #f8f9fa; // Snow white
+$text: #4a4a4a; // Dark gray
+$background: #ffffff; // Pure white
+
+// Modern color functions
+@use "sass:color";
+
+// Mixins
+@mixin transition($property: all, $duration: 0.3s, $ease: cubic-bezier(0.25, 0.46, 0.45, 0.94)) {
+  transition: $property $duration $ease;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+@mixin section-padding {
+  padding: 4rem 1.5rem;
+  
+  @media (min-width: 768px) {
+    padding: 6rem 2rem;
+  }
+}
+
+// Fonts
+$font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+// Base styles
+.blogContainer {
+  font-family: $font-main;
+  color: $text;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $background;
+}
+
+// Shared components
+.sectionTitle {
+  font-family: $font-heading;
+  font-size: 2rem;
+  color: $dark;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: $accent;
+    border-radius: 2px;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: $accent;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  @include transition;
+  
+  &:hover {
+    background: color.adjust($accent, $lightness: -10%);
+    transform: translateY(-2px);
+  }
+}
+
+// Hero section
+.heroSection {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  max-height: 600px;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  
+  .heroImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1);
+    @include transition(transform, 8s);
+  }
+  
+  &:hover .heroImage {
+    transform: scale(1.05);
+  }
+  
+  .heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+    z-index: 2;
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    color: white;
+    
+    h1 {
+      font-family: $font-heading;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      line-height: 1.2;
+    }
+    
+    p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+  }
+}
+
+// Blog listing page styles
+.featuredPosts {
+  max-width: 1280px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+  
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+
+.postGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  
+  @media (min-width: 768px) {
+    gap: 3rem;
+  }
+}
+
+.postCard {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  @include card-shadow;
+  @include transition;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    
+    .cardImage .postImage {
+      transform: scale(1.08);
+    }
+    
+    .readMore {
+      color: color.scale($accent, $lightness: -15%);
+    }
+  }
+  
+  .cardLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .cardImage {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
+    
+    @media (min-width: 768px) {
+      height: 260px;
+    }
+    
+    .postImage {
+      position: relative !important;
+      object-fit: cover;
+      @include transition(transform, 0.8s);
+    }
+    
+    .imageOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.2));
+      z-index: 1;
+    }
+  }
+  
+  .difficultyBadge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 1rem;
+    background: rgba($dark, 0.85);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+    @include card-shadow;
+  }
+  
+  .cardContent {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+    > *:last-child {
+      margin-top: auto;
+    }
+  }
+  
+  .postCategory {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: $primary;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+    @include card-shadow;
+  }
+  
+  h3 {
+    font-family: $font-heading;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    color: $dark;
+  }
+  
+  .postExcerpt {
+    color: color.adjust($text, $lightness: 20%);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .postMeta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: color.adjust($text, $lightness: 30%);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    
+    span {
+      display: flex;
+      align-items: center;
+    }
+    
+    svg {
+      margin-right: 0.4rem;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  }
+  
+  .readMore {
+    display: inline-flex;
+    align-items: center;
+    color: $accent;
+    font-weight: 600;
+    text-decoration: none;
+    @include transition;
+    font-size: 0.9rem;
+    
+    &::after {
+      content: '→';
+      margin-left: 0.5rem;
+      @include transition;
+    }
+    
+    &:hover::after {
+      transform: translateX(3px);
+    }
+  }
+}
+
+// Blog detail page styles
+.blogDetail {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  
+  @media (min-width: 768px) {
+    padding: 0 2rem;
+  }
+}
+
+.detailHeader {
+  margin-bottom: 3rem;
+  text-align: center;
+  
+  .backLink {
+    display: inline-flex;
+    align-items: center;
+    color: $accent;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    @include transition;
+    
+    &:hover {
+      color: color.adjust($accent, $lightness: -15%);
+    }
+    
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+  
+  h1 {
+    font-family: $font-heading;
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    color: $dark;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  
+  .postMeta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    color: color.adjust($text, $lightness: 20%);
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    
+    span {
+      display: flex;
+      align-items: center;
+      
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  
+  .featuredImage {
+    position: relative;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0 auto;
+    @include card-shadow;
+    
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+    
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.detailContent {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  h2, h3 {
+    font-family: $font-heading;
+    color: $dark;
+    margin: 2.5rem 0 1.5rem;
+    line-height: 1.4;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .contentImage {
+    position: relative;
+    height: 400px;
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    @include card-shadow;
+    
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+    
+    img {
+      object-fit: cover;
+    }
+    
+    figcaption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: color.adjust($text, $lightness: 30%);
+      margin-top: 0.5rem;
+    }
+  }
+  
+  blockquote {
+    border-left: 4px solid $accent;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: color.adjust($text, $lightness: 20%);
+    
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    
+    footer {
+      font-style: normal;
+      font-size: 0.9rem;
+      color: color.adjust($text, $lightness: 30%);
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.gallerySection {
+  margin: 4rem 0;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    
+    .galleryImage {
+      position: relative;
+      height: 200px;
+      border-radius: 8px;
+      overflow: hidden;
+      @include card-shadow;
+      @include transition;
+      
+      &:hover {
+        transform: translateY(-5px);
+      }
+      
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.tipsSection {
+  background: color.adjust($light, $lightness: -2%);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin: 4rem 0;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      
+      &::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: $accent;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Newsletter section
+.newsletterSection {
+  background: linear-gradient(135deg, $primary, color.adjust($primary, $lightness: -10%));
+  padding: 4rem 1.5rem;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+  @media (min-width: 768px) {
+    padding: 6rem 2rem;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(white, 0.05) 0%, transparent 70%);
+    transform: rotate(30deg);
+  }
+  
+  .newsletterContent {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    
+    h2 {
+      font-family: $font-heading;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+  }
+  
+  .newsletterForm {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+    @include card-shadow;
+    
+    input {
+      flex: 1;
+      padding: 0.9rem 1.2rem;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+      
+      &::placeholder {
+        color: color.adjust($text, $lightness: 40%);
+      }
+    }
+    
+    button {
+      padding: 0 1.8rem;
+      background: $accent;
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      @include transition;
+      
+      &:hover {
+        background: color.adjust($accent, $lightness: -10%);
+      }
+    }
+  }
+}

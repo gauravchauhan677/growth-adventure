@@ -1,0 +1,60 @@
+.requirementsSection {
+    margin-bottom: 3rem;
+    background: #f5f7fa;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    .sectionHeading {
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+      color: #1a2a3a;
+      position: relative;
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background-color: #f5b349;
+      }
+    }
+  
+    .requirementsList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+  
+      .requirementItem {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+        background: #ffffff;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        color: #34495e;
+  
+        .requirementIcon {
+          color: #e74c3c;
+          font-size: 1.2rem;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .requirementsSection {
+      .sectionHeading {
+        font-size: 1.75rem;
+      }
+    }
+  }

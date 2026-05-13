@@ -1,0 +1,46 @@
+@use "sass:math";
+@use "sass:color";
+
+// Color Variables
+$primary: #2c3e50;
+$secondary: #e74c3c;
+$accent: #f39c12;
+$light: #ecf0f1;
+$dark: #2c3e50;
+$text: #34495e;
+$text-light: #7f8c8d;
+$white: #ffffff;
+$success: #27ae60;
+$warning: #f1c40f;
+$info: #3498db;
+
+// Spacing
+$spacing-unit: 1rem;
+$border-radius: 0.5rem;
+$box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// Responsive Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Base Styles
+.trekDetailContainer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $text;
+  line-height: 1.6;
+  background-color: white;
+}
+
+// Content Wrapper
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-unit * 2 $spacing-unit * 4;
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 $spacing-unit $spacing-unit * 3;
+  }
+}

@@ -1,0 +1,45 @@
+@use "../../trekDetail.module.scss" as base;
+
+.highlightsSection {
+  margin-bottom: base.$spacing-unit * 3;
+
+  .highlightsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: base.$spacing-unit * 1.5;
+
+    .highlightCard {
+      background: base.$white;
+      border-radius: base.$border-radius;
+      padding: base.$spacing-unit * 1.5;
+      box-shadow: base.$box-shadow;
+      position: relative;
+      padding-left: base.$spacing-unit * 3;
+      transition: base.$transition;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .highlightNumber {
+        position: absolute;
+        left: base.$spacing-unit;
+        top: base.$spacing-unit * 1.5;
+        width: base.$spacing-unit * 1.5;
+        height: base.$spacing-unit * 1.5;
+        background: base.$accent;
+        color: base.$dark;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+
+      .highlightText {
+        margin: 0;
+      }
+    }
+  }
+}

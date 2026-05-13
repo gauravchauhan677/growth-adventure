@@ -1,0 +1,143 @@
+// BookingSection.module.scss
+@use "sass:math";
+@use "../../trekDetail.module.scss" as base;
+
+.bookingSection {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 400px; // Optimal reading width for mobile
+
+  .bookingCard {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    text-align: center;
+
+    .bookingTitle {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      color: #2b2d42; // Dark blue-gray
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 0.75rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        right: 25%;
+        height: 2px;
+        background: #d8a947; // Golden accent
+      }
+    }
+
+    .priceContainer {
+      margin-bottom: 1.5rem;
+      
+      .priceLabel {
+        font-size: 0.8rem;
+        color: #6c757d;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.25rem;
+      }
+
+      .priceAmount {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2e5d50; // Earthy green
+        line-height: 1;
+        margin: 0 0.25rem;
+      }
+
+      .pricePerPerson {
+        font-size: 0.8rem;
+        color: #6c757d;
+      }
+    }
+
+    .bookingInfo {
+      margin: 1.75rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .infoItem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: #495057;
+
+        .infoIcon {
+          color: #d8a947; // Golden accent
+          font-size: 1rem;
+          min-width: 1rem;
+        }
+      }
+    }
+
+    .buttonGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+
+      @media (min-width: base.$breakpoint-sm) {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .bookButton {
+      background: #2e5d50; // Earthy green
+      color: white;
+      padding: 0.8rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      &:hover {
+        background: #24473f;
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    .secondaryButton {
+      color: #2b2d42;
+      padding: 0.8rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid #ced4da;
+      background: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      &:hover {
+        border-color: #2b2d42;
+        background: #f1f3f5;
+      }
+    }
+  }
+}

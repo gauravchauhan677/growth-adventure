@@ -1,0 +1,208 @@
+// /app/about/about.module.scss
+// Modern Color Palette with Mountain Theme
+$primary: #2a7f62;       // Deep Alpine Green
+$primary-light: #3a9d7a; // Vibrant Mountain Green
+$secondary: #3a5a78;     // Glacier Blue
+$accent: #e76f51;        // Sunrise Orange
+$dark: #1e2b37;          // Midnight Rock
+$light: #f8f9fa;         // Snow White
+$text: #4a5568;          // Storm Gray
+$text-light: #718096;    // Mist Gray
+
+// Fonts
+$font-main: 'Inter', -apple-system, sans-serif;
+$font-heading: 'Montserrat', 'Helvetica Neue', sans-serif;
+
+// Spacing System
+$space-unit: 1rem;
+$space-xs: $space-unit * 0.5;   // 8px
+$space-sm: $space-unit * 0.75;  // 12px
+$space-md: $space-unit * 1.5;   // 24px
+$space-lg: $space-unit * 3;     // 48px
+$space-xl: $space-unit * 4;     // 64px
+$space-xxl: $space-unit * 6;    // 96px
+
+// Border Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-round: 50%;
+
+// Shadows
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+
+// Transitions
+$transition-fast: all 0.2s ease;
+$transition-normal: all 0.3s ease;
+$transition-slow: all 0.5s ease;
+$transition-bounce: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin absolute-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin text-gradient {
+  background: linear-gradient(90deg, $primary, $primary-light);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin fade-in($delay: 0s) {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: $delay;
+}
+
+@mixin slide-up($delay: 0s) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease forwards;
+  animation-delay: $delay;
+}
+
+@mixin scale-in($delay: 0s) {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.6s ease forwards;
+  animation-delay: $delay;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.aboutContainer {
+  font-family: $font-main;
+  color: $text;
+  line-height: 1.6;
+  overflow-x: hidden;
+  
+  h1, h2, h3, h4 {
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $dark;
+  }
+  
+  a {
+    transition: $transition-fast;
+    text-decoration: none;
+  }
+  
+  section {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+// Diagonal Divider with Animation
+.diagonalDivider {
+  position: relative;
+  height: 100px;
+  background: linear-gradient(to bottom right, $primary 49.9%, transparent 50%);
+  margin-top: -1px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.8s forwards;
+  
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+}
+
+// Section Container
+.sectionContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 $space-xl;
+  
+  @media (max-width: 768px) {
+    padding: 0 $space-md;
+  }
+}
+
+// Section Header
+.sectionHeader {
+  text-align: center;
+  margin-bottom: $space-xxl;
+  
+  .sectionSubtitle {
+    display: inline-block;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: $space-sm;
+    @include fade-in;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: $space-md;
+    @include slide-up(0.2s);
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include fade-in(0.4s);
+    
+    .dividerLine {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(to right, $primary, $primary-light);
+      
+      @media (max-width: 768px) {
+        width: 40px;
+      }
+    }
+    
+    .dividerIcon {
+      margin: 0 $space-sm;
+      color: $primary;
+      font-size: 1.2rem;
+    }
+  }
+}

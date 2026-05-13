@@ -1,0 +1,98 @@
+.heroSection {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    .heroContent {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem;
+      color: #ffffff;
+  
+      .heroTitle {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        font-weight: 700;
+      }
+  
+      .heroMeta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        font-size: 1.1rem;
+  
+        .difficulty {
+          padding: 0.25rem 1rem;
+          border-radius: 0.5rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 0.8rem;
+          letter-spacing: 0.5px;
+  
+          &[data-difficulty="challenging"] {
+            background-color: #f39c12;
+            color: #1a2a3a;
+          }
+          &[data-difficulty="advanced"] {
+            background-color: #e74c3c;
+            color: #ffffff;
+          }
+          &[data-difficulty="extreme"] {
+            background-color: #d64541;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  
+    .heroOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      z-index: 1;
+    }
+  
+    .heroImage {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heroSection {
+      height: 60vh;
+      min-height: 500px;
+  
+      .heroContent {
+        padding: 2rem;
+  
+        .heroTitle {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .heroSection {
+      height: 50vh;
+      min-height: 400px;
+  
+      .heroContent {
+        .heroTitle {
+          font-size: 2rem;
+        }
+      }
+    }
+  }

@@ -1,0 +1,71 @@
+@use "../../trekDetail.module.scss" as base;
+
+.notFound {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: base.$spacing-unit * 2;
+  text-align: center;
+
+  .notFoundContent {
+    max-width: 600px;
+
+    .notFoundHeading {
+      font-size: 2rem;
+      color: base.$primary;
+      margin-bottom: base.$spacing-unit;
+    }
+
+    .notFoundText {
+      font-size: 1.2rem;
+      margin-bottom: base.$spacing-unit * 2;
+    }
+
+    .suggestedTreks {
+      margin: base.$spacing-unit * 2 0;
+
+      .suggestedHeading {
+        font-size: 1.2rem;
+        margin-bottom: base.$spacing-unit;
+      }
+
+      .trekList {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: base.$spacing-unit;
+        flex-wrap: wrap;
+
+        .trekListItem {
+          .trekLink {
+            color: base.$primary;
+            text-decoration: none;
+            font-weight: 600;
+            transition: base.$transition;
+
+            &:hover {
+              color: base.$accent;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .homeLink {
+      display: inline-block;
+      color: base.$primary;
+      text-decoration: none;
+      font-weight: 600;
+      transition: base.$transition;
+      margin-top: base.$spacing-unit;
+
+      &:hover {
+        color: base.$accent;
+        text-decoration: underline;
+      }
+    }
+  }
+}

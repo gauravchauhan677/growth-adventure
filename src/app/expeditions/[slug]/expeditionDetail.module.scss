@@ -1,0 +1,18 @@
+.expeditionDetailContainer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #34495e;
+  line-height: 1.6;
+  background-color: white;
+}
+
+.contentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    padding: 0 1rem 3rem;
+  }
+}

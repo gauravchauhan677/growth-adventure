@@ -1,0 +1,342 @@
+@use "sass:math";
+
+// Color Variables
+$primary: #2c3e50;       // Dark blue
+$secondary: #e74c3c;     // Vibrant red
+$accent: #f39c12;        // Orange
+$light: #ecf0f1;         // Light gray
+$dark: #2c3e50;          // Dark blue
+$text: #34495e;          // Dark gray-blue
+$text-light: #7f8c8d;    // Light gray
+$white: #ffffff;
+$success: #27ae60;       // Green
+$warning: #f1c40f;       // Yellow
+$info: #3498db;          // Blue
+
+// Spacing
+$spacing-unit: 1rem;
+$border-radius: 0.5rem;
+$box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// Responsive Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Base Styles
+.treksContainer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $text;
+  line-height: 1.6;
+  background-color: white;
+}
+
+// Hero Section with transition
+.heroSection {
+  position: relative;
+  height: 40vh;
+  min-height: 300px;
+  margin-bottom: $spacing-unit * 3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: $spacing-unit * 2;
+    color: $white;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+
+    .heroTitle {
+      font-size: 2.5rem;
+      margin-bottom: $spacing-unit;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      font-weight: 600;
+    }
+
+    .heroSubtitle {
+      font-size: 1.25rem;
+      margin-bottom: 0;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      font-weight: 400;
+    }
+  }
+
+  .heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+  }
+
+  .heroImageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .heroImage {
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.1);
+    transition: transform 8s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    will-change: transform;
+  }
+
+  &:hover .heroImage {
+    transform: scale(1);
+  }
+}
+
+// Animation keyframes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Treks Grid
+.treksGridSection {
+  padding: 0 $spacing-unit * 2 $spacing-unit * 4;
+
+  .treksGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: $spacing-unit * 2;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+// Trek Card
+.trekCard {
+  background: $white;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  transition: $transition;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .trekLink {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .trekImage {
+    position: relative;
+    height: 200px;
+    width: 100%;
+
+    .image {
+      object-fit: cover;
+      transition: $transition;
+    }
+
+    &:hover .image {
+      transform: scale(1.05);
+    }
+  }
+
+  .difficultyBadge {
+    position: absolute;
+    top: $spacing-unit;
+    left: $spacing-unit;
+    padding: math.div($spacing-unit, 2) $spacing-unit;
+    border-radius: $border-radius;
+    font-weight: 600;
+    color: $white;
+    font-size: 0.875rem;
+
+    &[data-difficulty="easy"] {
+      background-color: $success;
+    }
+    &[data-difficulty="moderate"] {
+      background-color: $warning;
+      color: $dark;
+    }
+    &[data-difficulty="challenging"] {
+      background-color: $secondary;
+    }
+    &[data-difficulty="difficult"] {
+      background-color: $secondary;
+    }
+  }
+
+  .trekContent {
+    padding: $spacing-unit * 1.5;
+
+    .trekTitle {
+      font-size: 1.5rem;
+      margin-bottom: math.div($spacing-unit, 2);
+      color: $dark;
+    }
+
+    .shortDescription {
+      color: $text-light;
+      margin-bottom: $spacing-unit;
+    }
+
+    .trekMeta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-unit;
+      margin-bottom: $spacing-unit;
+
+      .metaItem {
+        display: flex;
+        align-items: center;
+        gap: math.div($spacing-unit, 2);
+        font-size: 0.875rem;
+        color: $text-light;
+
+        .metaIcon {
+          color: $accent;
+        }
+      }
+    }
+
+    .priceContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: $spacing-unit;
+
+      .price {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $secondary;
+      }
+
+      .groupSize {
+        font-size: 0.875rem;
+        color: $text-light;
+      }
+    }
+
+    .highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .highlightItem {
+        position: relative;
+        padding-left: $spacing-unit;
+        margin-bottom: math.div($spacing-unit, 2);
+        font-size: 0.875rem;
+
+        &::before {
+          content: '•';
+          position: absolute;
+          left: 0;
+          color: $accent;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// CTA Section
+.ctaSection {
+  background-color: $primary;
+  color: $white;
+  padding: $spacing-unit * 4 $spacing-unit * 2;
+  text-align: center;
+
+  .ctaContent {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .ctaTitle {
+      font-size: 2rem;
+      margin-bottom: $spacing-unit;
+    }
+
+    .ctaText {
+      font-size: 1.125rem;
+      margin-bottom: $spacing-unit * 2;
+      opacity: 0.9;
+    }
+
+    .ctaButton {
+      display: inline-block;
+      background-color: $accent;
+      color: $dark;
+      padding: $spacing-unit $spacing-unit * 2;
+      border-radius: $border-radius;
+      font-weight: 600;
+      text-decoration: none;
+      transition: $transition;
+
+      &:hover {
+        background-color: #db8c0a; 
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: $breakpoint-md) {
+  .heroSection {
+    height: 35vh;
+    min-height: 250px;
+
+    .heroContent {
+      .heroTitle {
+        font-size: 2rem;
+      }
+      .heroSubtitle {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .trekCard {
+    .trekContent {
+      .trekTitle {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .heroSection {
+    height: 30vh;
+
+    .heroContent {
+      .heroTitle {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  .treksGrid {
+    grid-template-columns: 1fr !important;
+  }
+}

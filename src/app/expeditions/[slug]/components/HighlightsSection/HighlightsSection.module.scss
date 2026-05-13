@@ -1,0 +1,74 @@
+.highlightsSection {
+    margin-bottom: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    .sectionHeading {
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+      color: #1a2a3a;
+      position: relative;
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background-color: #f5b349;
+      }
+    }
+  
+    .highlightsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+  
+      .highlightCard {
+        background: #ffffff;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        position: relative;
+        padding-left: 3rem;
+        transition: all 0.3s ease;
+        border: 1px solid #e0e0e0;
+  
+        &:hover {
+          transform: translateY(-5px);
+        }
+  
+        .highlightNumber {
+          position: absolute;
+          left: 1rem;
+          top: 1.5rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          background: #f5b349;
+          color: #1a2a3a;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          font-size: 0.9rem;
+        }
+  
+        .highlightText {
+          margin: 0;
+          line-height: 1.6;
+          color: #34495e;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .highlightsSection {
+      .sectionHeading {
+        font-size: 1.75rem;
+      }
+    }
+  }

@@ -1,0 +1,58 @@
+@use "../../trekDetail.module.scss" as base;
+
+.includedSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(base.$spacing-unit * 2);
+  margin-bottom: calc(base.$spacing-unit * 3);
+
+  @media (max-width: base.$breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+
+  .includedColumn, .excludedColumn {
+    background: base.$white;
+    border-radius: base.$border-radius;
+    padding: calc(base.$spacing-unit * 1.5);
+    box-shadow: base.$box-shadow;
+  }
+
+  .includedHeading {
+    color: base.$success;
+    margin-bottom: base.$spacing-unit;
+    font-size: 1.25rem;
+  }
+
+  .excludedHeading {
+    color: base.$secondary;
+    margin-bottom: base.$spacing-unit;
+    font-size: 1.25rem;
+  }
+
+  .includedList, .excludedList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .includedItem, .excludedItem {
+      position: relative;
+      padding-left: calc(base.$spacing-unit * 1.5);
+      margin-bottom: calc(base.$spacing-unit / 2); /* Changed from math.div() */
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+    }
+
+    .includedItem::before {
+      color: base.$success;
+    }
+
+    .excludedItem::before {
+      color: base.$secondary;
+    }
+  }
+}

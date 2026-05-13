@@ -1,0 +1,101 @@
+@use "../../trekDetail.module.scss" as base;
+
+.overviewSection {
+  margin-bottom: calc(base.$spacing-unit * 3);
+
+  .trekDescription {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: calc(base.$spacing-unit * 2);
+  }
+
+  .keyInfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: calc(base.$spacing-unit * 1.5);
+    margin: calc(base.$spacing-unit * 2) 0;
+
+    @media (max-width: base.$breakpoint-md) {
+      grid-template-columns: 1fr;
+      gap: calc(base.$spacing-unit * 1);
+    }
+  }
+
+  .infoCard {
+    background: base.$white;
+    border-radius: base.$border-radius;
+    padding: calc(base.$spacing-unit * 1.5);
+    box-shadow: base.$box-shadow;
+    transition: base.$transition;
+    display: flex;
+    gap: base.$spacing-unit;
+    align-items: center;
+
+    @media (max-width: base.$breakpoint-md) {
+      padding: calc(base.$spacing-unit * 1);
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .infoIcon {
+      font-size: 1.5rem;
+      color: base.$primary;
+      background: rgba(base.$primary, 0.1);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      @media (max-width: base.$breakpoint-md) {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+    }
+
+    .infoContent {
+      .infoTitle {
+        font-size: 1rem;
+        margin-bottom: calc(base.$spacing-unit / 2);
+        color: base.$text-light;
+      }
+
+      .infoText {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0;
+        color: base.$text;
+        
+        @media (max-width: base.$breakpoint-md) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.sectionHeading {
+  font-size: 2rem;
+  margin-bottom: calc(base.$spacing-unit * 1.5);
+  color: base.$primary;
+  position: relative;
+  padding-bottom: calc(base.$spacing-unit / 2);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: base.$accent;
+  }
+
+  @media (max-width: base.$breakpoint-md) {
+    font-size: 1.5rem;
+  }
+}

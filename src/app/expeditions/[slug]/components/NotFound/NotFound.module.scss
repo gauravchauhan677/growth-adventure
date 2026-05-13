@@ -1,0 +1,43 @@
+.notFound {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    .notFoundContent {
+      max-width: 600px;
+  
+      .notFoundHeading {
+        font-size: 2rem;
+        color: #1a2a3a;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+  
+      .notFoundText {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #34495e;
+      }
+  
+      .homeLink {
+        display: inline-block;
+        color: #1a2a3a;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background: #f5f7fa;
+  
+        &:hover {
+          color: #f5b349;
+          background: #e0e6ed;
+        }
+      }
+    }
+  }

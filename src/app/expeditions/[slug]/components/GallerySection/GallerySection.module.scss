@@ -1,0 +1,226 @@
+.gallerySection {
+  margin-bottom: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .sectionHeading {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    color: #1a2a3a;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background-color: #f5b349;
+    }
+  }
+
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    .galleryItem {
+      position: relative;
+      height: 200px;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #e0e0e0;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .galleryImage {
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  // Lightbox styles
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+
+    .closeButton {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 1001;
+      transition: transform 0.2s ease;
+      padding: 0.5rem;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .lightboxContent {
+      position: relative;
+      width: 90%;
+      height: 70%;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .lightboxImage {
+        object-fit: contain;
+      }
+    }
+
+    .navButtonsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 1rem;
+
+      .navButton {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: none;
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.3);
+          transform: scale(1.1);
+        }
+      }
+
+      .imageCounter {
+        color: white;
+        font-size: 1.2rem;
+        min-width: 80px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (min-width: 769px) {
+  .gallerySection {
+    .lightbox {
+      .lightboxContent {
+        height: 80%;
+      }
+
+      .navButtonsContainer {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        margin-top: 0;
+        justify-content: space-between;
+        padding: 0 2rem;
+        pointer-events: none;
+
+        .navButton {
+          pointer-events: auto;
+          position: static;
+          transform: none;
+        }
+
+        .imageCounter {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallerySection {
+    .sectionHeading {
+      font-size: 1.75rem;
+    }
+
+    .galleryGrid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .lightbox {
+      .lightboxContent {
+        height: 60%;
+      }
+
+      .navButtonsContainer {
+        .navButton {
+          width: 50px;
+          height: 50px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .gallerySection {
+    .galleryGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .lightbox {
+      .lightboxContent {
+        height: 50%;
+      }
+
+      .navButtonsContainer {
+        gap: 1rem;
+        
+        .navButton {
+          width: 40px;
+          height: 40px;
+          font-size: 1.2rem;
+        }
+
+        .imageCounter {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

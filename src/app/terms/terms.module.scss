@@ -1,0 +1,241 @@
+// Variables
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$accent-color: #e74c3c;
+$light-bg: #f8f9fa;
+$text-color: #333;
+$light-text: #7f8c8d;
+$border-color: #eaeaea;
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+// Base Styles
+.termsPage {
+  color: $text-color;
+  line-height: 1.6;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hero {
+  background: linear-gradient(135deg, $primary-color 0%, #1a2b3c 100%);
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: $secondary-color;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+  padding: 3rem;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  margin-bottom: 3rem;
+
+  h2 {
+    font-size: 1.5rem;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      background: $secondary-color;
+      color: white;
+      border-radius: 50%;
+      font-size: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.75rem;
+      position: relative;
+      padding-left: 1.5rem;
+
+      &::before {
+        content: '•';
+        color: $secondary-color;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}
+
+.policyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.policyItem {
+  background: $light-bg;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid $secondary-color;
+
+  h3 {
+    font-size: 1.1rem;
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-weight: 600;
+    color: $accent-color;
+    margin: 0;
+  }
+}
+
+.note {
+  font-style: italic;
+  color: $light-text;
+  padding: 0.5rem 1rem;
+  background: rgba($secondary-color, 0.05);
+  border-left: 3px solid $secondary-color;
+}
+
+.contactBox {
+  background: $light-bg;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 3rem 0;
+  border: 1px solid $border-color;
+
+  h3 {
+    color: $primary-color;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .contactInfo {
+    a {
+      color: $secondary-color;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    address {
+      font-style: normal;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.revision {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border-color;
+  color: $light-text;
+  font-size: 0.9rem;
+
+  p {
+    margin: 0.5rem 0;
+  }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .content {
+    padding: 2rem 1.5rem;
+    margin-top: -2rem;
+  }
+
+  .section h2 {
+    font-size: 1.3rem;
+  }
+
+  .policyGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .content {
+    padding: 1.5rem 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+
+    span {
+      margin-bottom: 0.5rem;
+      margin-right: 0;
+    }
+  }
+}
