@@ -90,7 +90,7 @@ export default function StorySection() {
                 />
               </div>
               <div className={styles.imageBadge}>
-                <span className={styles.badgeYears}>5</span>
+                <span className={styles.badgeYears}>15</span>
                 <span className={styles.badgeText}>Years of Excellence</span>
               </div>
             </div>
