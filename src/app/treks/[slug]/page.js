@@ -10,7 +10,8 @@ import TrekNotFound from './components/TrekNotFound';
 import styles from './trekDetail.module.scss';
 
 export default async function TrekDetailPage({ params }) {
-  const trek = await getTrekData(params.slug);
+  const { slug } = await params;
+const trek = await getTrekData(slug);
 
   if (!trek) {
     return <TrekNotFound />;
