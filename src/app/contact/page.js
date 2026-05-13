@@ -157,7 +157,7 @@ const ContactPage = () => {
               <div>
                 <h3>Base Camp Office</h3>
                 <p>
-                  Chauhan Bhawan, Opposite - Apline Public Schol, Tiloth Road
+                  Gangotri,
                   <br />
                   Uttarkashi, Uttarakhand
                 </p>
@@ -170,7 +170,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3>Phone</h3>
-                <p>+91-8266882595</p>
+                <p>+91-9410703518</p>
                 <p className={styles.contactNote}>
                   Mon-Fri, 8:00 AM - 6:00 PM (GMT+5:45)
                 </p>
@@ -183,7 +183,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3>WhatsApp</h3>
-                <p>+91-8266882595</p>
+                <p>+91-9410703518</p>
                 <p className={styles.contactNote}>
                   Fast response for international clients
                 </p>
@@ -196,7 +196,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3>Email</h3>
-                <p>info@himalayaheights.com</p>
+                <p>growthadventure.uttarkashi@gmail.com</p>
                 <p className={styles.contactNote}>Response within 12 hours</p>
               </div>
             </div>
@@ -221,7 +221,7 @@ const ContactPage = () => {
             <h3>Follow Our Adventures</h3>
             <div className={styles.socialIcons}>
               <a
-                href="https://www.facebook.com/profile.php?id=61577948457253"
+                href="https://www.facebook.com/profile.php?id=100072234413841"
                 aria-label="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -229,7 +229,7 @@ const ContactPage = () => {
                 <FaFacebook />
               </a>
               <a
-                href="https://www.instagram.com/himalaya_heights/"
+                href="https://www.instagram.com/growth_adventure/"
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -237,7 +237,7 @@ const ContactPage = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://wa.me/918266882595"
+                href="https://wa.me/919410803518"
                 aria-label="WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
