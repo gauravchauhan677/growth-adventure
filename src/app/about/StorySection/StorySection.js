@@ -82,7 +82,7 @@ export default function StorySection() {
             <div className={styles.imageContainer}>
               <div className={styles.mainImageWrapper}>
                 <Image
-                  src="/images/about.jpeg"
+                  src="/images/about1.jpg"
                   alt="Our team in the mountains"
                   fill
                   className={styles.mainImage}

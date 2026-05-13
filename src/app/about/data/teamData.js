@@ -3,13 +3,13 @@ import { FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 
 export const teamData = [
   {
-    name: "Yash Rawat",
+    name: "Pradeep Rana",
     role: "Expedition Guide",
-    bio: "• IFMGA Certified • 12 years experience",
-    image: "/images/yash.jpeg",
+    bio: "• BMC - NIM • 12 years experience",
+    image: "/images/pradeep.jpg",
     socialLinks: [
-      { name: "Facebook", url: "https://www.facebook.com/yash.rawat.9659", icon: <FaFacebook /> },
-      { name: "Instagram", url: "https://www.instagram.com/yash_rawat_123456/", icon: <FaInstagram /> }
+      { name: "Facebook", url: "https://www.facebook.com/jasperevely808", icon: <FaFacebook /> },
+      { name: "Instagram", url: "https://www.instagram.com/pradeeprana75/", icon: <FaInstagram /> }
     ]
   },
   
