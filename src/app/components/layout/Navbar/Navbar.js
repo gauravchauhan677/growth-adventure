@@ -11,6 +11,7 @@ import {
   FaInstagram,
   FaFacebook,
   FaLinkedin,
+  FaWhatsapp,
 } from "react-icons/fa";
 import Image from "next/image";
 
@@ -66,9 +67,9 @@ const Navbar = () => {
   }, [pathname]);
 
   const socialLinks = [
-    { icon: <FaInstagram />, url: "https://www.instagram.com/himalaya_heights/" },
-    { icon: <FaFacebook />, url: "https://www.facebook.com/profile.php?id=61577948457253" },
-    { icon: <FaLinkedin />, url: "https://www.linkedin.com/company/himalayas-expedition/" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/growth_adventure/" },
+    { icon: <FaFacebook />, url: "https://www.facebook.com/profile.php?id=100072234413841" },
+    { icon: <FaWhatsapp />, url: "https://wa.me/919410703518" },
   ];
 
   return (
@@ -79,15 +80,15 @@ const Navbar = () => {
           className={`${styles.logo} ${styles.logoLink}`}
           onClick={closeMenu}
         >
-          <Image
-            src="/images/logo.jpg"
+          {/* <Image
+            src="/images/logo.png"
             alt="Himalayas Expedition Logo"
             width={80}
             height={80}
             className={styles.logoImage}
             priority
-          />
-          <span>Himalaya Heights</span>
+          /> */}
+          <span>Growth Adventure</span>
         </Link>
 
         <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>

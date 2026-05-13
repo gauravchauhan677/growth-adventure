@@ -1,5 +1,5 @@
 'use client';
-import { 
+import {
   FaMountain,
   FaMapMarkedAlt,
   FaCalendarDay,
@@ -10,7 +10,8 @@ import {
   FaInstagram,
   FaTripadvisor,
   FaYoutube,
-  FaLinkedin
+  FaLinkedin,
+  FaWhatsapp
 } from 'react-icons/fa';
 import Link from 'next/link';
 import styles from './footer.module.scss';
@@ -21,15 +22,15 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerGrid}>
-        
+
         {/* Brand Column */}
         <div className={styles.brandColumn}>
           <div className={styles.logo}>
             <FaMountain className={styles.logoIcon} />
-            <span className={styles.logoText}>Himalaya Heights</span>
+            <span className={styles.logoText}>Growth Adventure</span>
           </div>
           <p className={styles.tagline}>
-            Crafting unforgettable Himalayan adventures since 2010. 
+            Crafting unforgettable Himalayan adventures since 2010.
             Sustainable tourism with certified guides.
           </p>
           <div className={styles.certifications}>
@@ -70,13 +71,13 @@ const Footer = () => {
           <div className={styles.contactItem}>
             <FaPhoneAlt className={styles.contactIcon} />
             <div>
-              <p>+91-8266882595</p>
+              <p>+91-94107 03518</p>
               <small>Office (10AM-5PM)</small>
             </div>
           </div>
           <div className={styles.contactItem}>
             <FaEnvelope className={styles.contactIcon} />
-            <p>info@himalayaheights.com</p>
+            <p>growthadventure.uttarkashi@gmail.com</p>
           </div>
           <div className={styles.contactItem}>
             <FaHome className={styles.contactIcon} />
@@ -91,9 +92,9 @@ const Footer = () => {
             Get trekking tips and exclusive offers
           </p>
           <form className={styles.newsletterForm}>
-            <input 
-              type="email" 
-              placeholder="Your email" 
+            <input
+              type="email"
+              placeholder="Your email"
               className={styles.newsletterInput}
               required
             />
@@ -102,29 +103,37 @@ const Footer = () => {
             </button>
           </form>
           <div className={styles.socialLinks}>
-            <a 
-              href="https://www.facebook.com/profile.php?id=61577948457253" 
+            <a
+              href="https://www.facebook.com/profile.php?id=100072234413841"
               aria-label="Facebook"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebookF />
             </a>
-            <a 
-              href="https://www.instagram.com/himalaya_heights/" 
+            <a
+              href="https://www.instagram.com/growth_adventure/"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram />
             </a>
-            <a 
+            {/* <a 
               href="https://www.linkedin.com/company/himalayas-expedition/" 
               aria-label="Linkedin"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin />
+            </a> */}
+            <a
+              href="https://wa.me/919410703518"
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp />
             </a>
           </div>
         </div>
@@ -133,7 +142,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className={styles.footerBottom}>
         <div className={styles.bottomContent}>
-          <p>© {currentYear} Himalayas Expedition. All rights reserved.</p>
+          <p>© {currentYear} Growth Adventure. All rights reserved.</p>
           <div className={styles.legalLinks}>
             <Link href="/terms" className={styles.legalLink}>Terms</Link>
             <Link href="/privacy" className={styles.legalLink}>Privacy</Link>

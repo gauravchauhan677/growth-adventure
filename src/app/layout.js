@@ -16,7 +16,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata = {
-  title: "Himalaya Heights",
+  title: "Growth Adventure",
   description: "Explore the best trekking expeditions in the Himalayas.",
 };
 

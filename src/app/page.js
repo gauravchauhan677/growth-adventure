@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <PopularTreks />
       <ExpeditionSection />
-       <PopularTreks />
-       <ChooseUs />
-       <Cta />
+      <ChooseUs />
+      <Cta />
     </main>
   );
 }
