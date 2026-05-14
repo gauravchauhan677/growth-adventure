@@ -43,7 +43,7 @@ export const popularTreks = [
     difficulty: "Easy",
     groupSize: "4-12 People",
     price: "₹24,999",
-    image: "/images/treks/dayara-bugyal-trek-uttarakhand-himalayas-hero.webp",
+    image: "/images/treks/dayara.webp",
     featured: false,
     bestSeason: ["Apr-Jun", "Sep-Nov"],
     altitude: "3,408m",
