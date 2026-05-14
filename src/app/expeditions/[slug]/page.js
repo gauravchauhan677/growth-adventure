@@ -10,8 +10,11 @@ import NotFound from './components/NotFound/NotFound';
 import { expeditionDetails } from './expeditionDetailData';
 import styles from './expeditionDetail.module.scss';
 
-export default function ExpeditionDetailPage({ params }) {
-  const expedition = expeditionDetails[params.slug];
+export default async function ExpeditionDetailPage({ params }) {
+
+  const { slug } = await params;
+
+  const expedition = expeditionDetails[slug];
 
   if (!expedition) {
     return <NotFound />;
@@ -20,7 +23,7 @@ export default function ExpeditionDetailPage({ params }) {
   return (
     <div className={styles.expeditionDetailContainer}>
       <HeroSection expedition={expedition} />
-      
+
       <div className={styles.contentWrapper}>
         <OverviewSection expedition={expedition} />
         <ItinerarySection expedition={expedition} />
