@@ -82,7 +82,6 @@ export const trekDetails = {
       "Anything not mentioned in inclusions",
     ],
     gallery: [
-      "/images/gallery/gaumukh-1.jpg",
       "/images/gallery/gaumukh-2.jpg",
       "/images/gallery/gaumukh-3.jpg",
       "/images/gallery/gaumukh-4.jpg",
@@ -533,110 +532,110 @@ export const trekDetails = {
       "/images/gallery/gidara-3.jpg",
     ],
   },
- "dodital-trek": {
-  id: 7,
-  slug: "dodital-trek",
-  title: "Dodital Trek with Darwa Pass",
-  description: "A 6-day Himalayan trek to the sacred Dodital Lake (3,024m), believed to be Lord Ganesha's birthplace. The journey passes through dense forests, alpine meadows, and culminates with an optional challenging climb to Darwa Pass (4,150m) for panoramic views of Bandarpunch and Swargarohini peaks.",
-  duration: "6 days",
-  difficulty: "Moderate (Darwa Pass: Challenging)",
-  maxAltitude: "4,150m (Darwa Pass)",
-  bestSeasons: ["March-June", "September-November"],
-  rating: 4.5,
-  groupSize: "4-12 people",
-  price: "₹24,999",
-  image: "/images/treks/dodital.jpg",
-  itinerary: [
-    {
-      day: 1,
-      title: "Dehradun to Agoda",
-      description: "Scenic 180km drive via Mussoorie and Uttarkashi. Trek briefing and overnight stay.",
-      altitude: "1,450m",
-      distance: "180km | 7-8hrs drive",
-      terrain: "Mountain roads",
-      stay: "Homestay/Camp"
-    },
-    {
-      day: 2,
-      title: "Trek to Manjhi (2,200m)",
-      description: "8km gradual ascent through pine/oak forests, passing Himalayan villages.",
-      altitude: "2,200m",
-      distance: "8km | 4-5hrs",
-      terrain: "Forest trails",
-      stay: "Tent"
-    },
-    {
-      day: 3,
-      title: "Trek to Dodital Lake (3,024m)",
-      description: "8-10km climb to the pristine lake. Evening exploration of the sacred site.",
-      altitude: "3,024m",
-      distance: "10km | 5-6hrs",
-      terrain: "Alpine meadows",
-      stay: "Tent"
-    },
-    {
-      day: 4,
-      title: "Darwa Pass Expedition (4,150m)",
-      description: "Optional steep climb to Darwa Pass for 360° mountain views. Return to Dodital.",
-      altitude: "4,150m",
-      distance: "10km round-trip | 6-8hrs",
-      terrain: "Steep rocky trails",
-      stay: "Tent",
-      highlight: "Panoramic views of Bandarpunch Massif"
-    },
-    {
-      day: 5,
-      title: "Dodital to Agoda",
-      description: "14-16km descent through forests. Celebrate trek completion.",
-      altitude: "1,450m",
-      distance: "16km | 5-6hrs",
-      terrain: "Descending trails",
-      stay: "Homestay"
-    },
-    {
-      day: 6,
-      title: "Drive to Dehradun",
-      description: "Return journey with optional stop at Uttarkashi's Kashi Vishwanath Temple.",
-      distance: "180km | 7-8hrs",
-      stay: "-"
-    }
-  ],
-  highlights: [
-    "Sacred Dodital Lake – crystal-clear waters with Himalayan trout",
-    "Darwa Pass (4,150m) – 360° views of Bandarpunch, Swargarohini, and Yamunotri ranges",
-    "Dense forests of oak, rhododendron, and deodar",
-    "Mythological significance as Ganesha's birthplace",
-    "Less crowded trail ideal for solitude seekers"
-  ],
-  included: [
-    "Dehradun to Sangamchatti round-trip transport",
-    "Accommodation (tents + homestays)",
-    "All meals (nutritious vegetarian)",
-    "Experienced trek leader + support staff",
-    "Permits (forest/entry fees)",
-    "Camping gear (tents, sleeping bags, mats)",
-    "Basic first aid + oxygen meter"
-  ],
-  notIncluded: [
-    "Personal trekking gear (backpack, shoes, etc.)",
-    "Travel insurance (mandatory)",
-    "Meals during road journeys",
-    "Darwa Pass guide (optional extra)",
-    "Tips for staff (~10% recommended)"
-  ],
-  requirements: [
-    "Fitness: 5-6 hours of daily walking",
-    "Basic trekking experience recommended",
-    "Warm clothing (nights near 0°C)",
-    "Waterproof gear (unpredictable weather)"
-  ],
-  gallery: [
-    "/images/gallery/dodital-lake.jpg",
-    "/images/gallery/dodital-forest.jpg",
-    "/images/gallery/darwa-pass.jpg",
-    "/images/gallery/dodital-campsite.jpg"
-  ]
-},
+  "dodital-trek": {
+    id: 7,
+    slug: "dodital-trek",
+    title: "Dodital Trek with Darwa Pass",
+    description: "A 6-day Himalayan trek to the sacred Dodital Lake (3,024m), believed to be Lord Ganesha's birthplace. The journey passes through dense forests, alpine meadows, and culminates with an optional challenging climb to Darwa Pass (4,150m) for panoramic views of Bandarpunch and Swargarohini peaks.",
+    duration: "6 days",
+    difficulty: "Moderate (Darwa Pass: Challenging)",
+    maxAltitude: "4,150m (Darwa Pass)",
+    bestSeasons: ["March-June", "September-November"],
+    rating: 4.5,
+    groupSize: "4-12 people",
+    price: "₹24,999",
+    image: "/images/treks/dodital.jpg",
+    itinerary: [
+      {
+        day: 1,
+        title: "Dehradun to Agoda",
+        description: "Scenic 180km drive via Mussoorie and Uttarkashi. Trek briefing and overnight stay.",
+        altitude: "1,450m",
+        distance: "180km | 7-8hrs drive",
+        terrain: "Mountain roads",
+        stay: "Homestay/Camp"
+      },
+      {
+        day: 2,
+        title: "Trek to Manjhi (2,200m)",
+        description: "8km gradual ascent through pine/oak forests, passing Himalayan villages.",
+        altitude: "2,200m",
+        distance: "8km | 4-5hrs",
+        terrain: "Forest trails",
+        stay: "Tent"
+      },
+      {
+        day: 3,
+        title: "Trek to Dodital Lake (3,024m)",
+        description: "8-10km climb to the pristine lake. Evening exploration of the sacred site.",
+        altitude: "3,024m",
+        distance: "10km | 5-6hrs",
+        terrain: "Alpine meadows",
+        stay: "Tent"
+      },
+      {
+        day: 4,
+        title: "Darwa Pass Expedition (4,150m)",
+        description: "Optional steep climb to Darwa Pass for 360° mountain views. Return to Dodital.",
+        altitude: "4,150m",
+        distance: "10km round-trip | 6-8hrs",
+        terrain: "Steep rocky trails",
+        stay: "Tent",
+        highlight: "Panoramic views of Bandarpunch Massif"
+      },
+      {
+        day: 5,
+        title: "Dodital to Agoda",
+        description: "14-16km descent through forests. Celebrate trek completion.",
+        altitude: "1,450m",
+        distance: "16km | 5-6hrs",
+        terrain: "Descending trails",
+        stay: "Homestay"
+      },
+      {
+        day: 6,
+        title: "Drive to Dehradun",
+        description: "Return journey with optional stop at Uttarkashi's Kashi Vishwanath Temple.",
+        distance: "180km | 7-8hrs",
+        stay: "-"
+      }
+    ],
+    highlights: [
+      "Sacred Dodital Lake – crystal-clear waters with Himalayan trout",
+      "Darwa Pass (4,150m) – 360° views of Bandarpunch, Swargarohini, and Yamunotri ranges",
+      "Dense forests of oak, rhododendron, and deodar",
+      "Mythological significance as Ganesha's birthplace",
+      "Less crowded trail ideal for solitude seekers"
+    ],
+    included: [
+      "Dehradun to Sangamchatti round-trip transport",
+      "Accommodation (tents + homestays)",
+      "All meals (nutritious vegetarian)",
+      "Experienced trek leader + support staff",
+      "Permits (forest/entry fees)",
+      "Camping gear (tents, sleeping bags, mats)",
+      "Basic first aid + oxygen meter"
+    ],
+    notIncluded: [
+      "Personal trekking gear (backpack, shoes, etc.)",
+      "Travel insurance (mandatory)",
+      "Meals during road journeys",
+      "Darwa Pass guide (optional extra)",
+      "Tips for staff (~10% recommended)"
+    ],
+    requirements: [
+      "Fitness: 5-6 hours of daily walking",
+      "Basic trekking experience recommended",
+      "Warm clothing (nights near 0°C)",
+      "Waterproof gear (unpredictable weather)"
+    ],
+    gallery: [
+      "/images/gallery/dodital-lake.jpg",
+      "/images/gallery/dodital-forest.jpg",
+      "/images/gallery/darwa-pass.jpg",
+      "/images/gallery/dodital-campsite.jpg"
+    ]
+  },
   "nandanvan-trek": {
     id: 8,
     slug: "nandanvan-trek",
@@ -970,95 +969,95 @@ export const trekDetails = {
     ],
   },
   'kuari-pass-trek': {
-  id: 12,
-  slug: 'kuari-pass-trek',
-  title: 'Kuari Pass Trek',
-  description: 'The Kuari Pass Trek offers breathtaking panoramic views of India\'s highest peaks including Nanda Devi, Dronagiri, and Kamet. Known as the "Lord Curzon\'s Trail", this moderate trek through dense forests and alpine meadows is perfect for first-time trekkers and seasoned hikers alike.',
-  duration: '6 days',
-  difficulty: 'Moderate',
-  maxAltitude: '3,820m (12,532ft)',
-  bestSeasons: ['April to June', 'September to December'],
-  rating: 4.7,
-  groupSize: '4-12 people',
-  price: '₹18,999',
-  image: '/images/treks/kuari-pass.jpg',
-  itinerary: [
-    {
-      day: 1,
-      title: 'Rishikesh to Joshimath (Drive)',
-      description: 'Scenic drive (250km/10-12hrs) along Alaknanda River via Devprayag and Rudraprayag. Overnight in Joshimath (1,890m) with orientation session.',
-      distance: '250km drive'
-    },
-    {
-      day: 2,
-      title: 'Joshimath to Chitrakhana (Trek)',
-      description: 'Drive to Dhak (1hr), then trek through oak and rhododendron forests to Chitrakhana (2,450m). First views of Hathi-Ghodi peaks.',
-      distance: '6km | 4-5 hours'
-    },
-    {
-      day: 3,
-      title: 'Chitrakhana to Tali Top',
-      description: 'Steep ascent through coniferous forests to Tali Top (3,300m). 360° views of Nanda Devi range. Camp near alpine lake.',
-      distance: '7km | 5-6 hours'
-    },
-    {
-      day: 4,
-      title: 'Tali Top to Kuari Pass to Khulara',
-      description: 'Summit day! Climb to Kuari Pass (3,820m) for sunrise over Nanda Devi. Descend to Khulara meadows (3,350m) via Lord Curzon\'s Trail.',
-      distance: '10km | 7-8 hours'
-    },
-    {
-      day: 5,
-      title: 'Khulara to Auli (Trek) to Joshimath (Drive)',
-      description: 'Gentle descent through forests to Auli (2,500m). Drive back to Joshimath. Celebration dinner.',
-      distance: '8km trek + 15km drive'
-    },
-    {
-      day: 6,
-      title: 'Joshimath to Rishikesh (Drive)',
-      description: 'Return drive to Rishikesh with stops at confluences. Trip concludes.',
-      distance: '250km drive'
-    }
-  ],
-  highlights: [
-    'Panoramic views of Nanda Devi (7,816m) - India\'s highest mountain',
-    'Walk the historic Lord Curzon\'s Trail through virgin forests',
-    'Sunrise at Kuari Pass with unobstructed Himalayan views',
-    'Moderate difficulty suitable for first-time trekkers',
-    'Chance to spot Himalayan monal (state bird of Uttarakhand)',
-    'Combine with visit to Auli ski resort (optional)'
-  ],
-  included: [
-    'All accommodation (guesthouses/camping)',
-    'All vegetarian meals during trek',
-    'Experienced local guides and support staff',
-    'Quality camping equipment (4-season tents, sleeping bags)',
-    'Trekking permits and forest fees',
-    'First aid kit and oxygen cylinder',
-    'Joshimath to Dhak transfers'
-  ],
-  notIncluded: [
-    'Transport to/from Rishikesh',
-    'Personal trekking gear',
-    'Travel insurance',
-    'Any meals during road journeys',
-    'Personal expenses',
-    'Auli cable car (optional)'
-  ],
-  gallery: [
-    '/images/gallery/kuari-1.jpg',
-    '/images/gallery/kuari-2.jpg',
-    '/images/gallery/kuari-3.jpg',
-    '/images/gallery/kuari-4.jpg',
-    '/images/gallery/kuari-5.jpg'
-  ],
-  notes: [
-    'Winter departures (Dec-Feb) require experience with snow trekking',
-    'Alternative route available via Gorson Bugyal for extended meadows experience',
-    'Best photography months: April-May (rhododendrons) & October-November (clear skies)',
-    'Can be combined with Auli winter ski package'
-  ]
-}
+    id: 12,
+    slug: 'kuari-pass-trek',
+    title: 'Kuari Pass Trek',
+    description: 'The Kuari Pass Trek offers breathtaking panoramic views of India\'s highest peaks including Nanda Devi, Dronagiri, and Kamet. Known as the "Lord Curzon\'s Trail", this moderate trek through dense forests and alpine meadows is perfect for first-time trekkers and seasoned hikers alike.',
+    duration: '6 days',
+    difficulty: 'Moderate',
+    maxAltitude: '3,820m (12,532ft)',
+    bestSeasons: ['April to June', 'September to December'],
+    rating: 4.7,
+    groupSize: '4-12 people',
+    price: '₹18,999',
+    image: '/images/treks/kuari-pass.jpg',
+    itinerary: [
+      {
+        day: 1,
+        title: 'Rishikesh to Joshimath (Drive)',
+        description: 'Scenic drive (250km/10-12hrs) along Alaknanda River via Devprayag and Rudraprayag. Overnight in Joshimath (1,890m) with orientation session.',
+        distance: '250km drive'
+      },
+      {
+        day: 2,
+        title: 'Joshimath to Chitrakhana (Trek)',
+        description: 'Drive to Dhak (1hr), then trek through oak and rhododendron forests to Chitrakhana (2,450m). First views of Hathi-Ghodi peaks.',
+        distance: '6km | 4-5 hours'
+      },
+      {
+        day: 3,
+        title: 'Chitrakhana to Tali Top',
+        description: 'Steep ascent through coniferous forests to Tali Top (3,300m). 360° views of Nanda Devi range. Camp near alpine lake.',
+        distance: '7km | 5-6 hours'
+      },
+      {
+        day: 4,
+        title: 'Tali Top to Kuari Pass to Khulara',
+        description: 'Summit day! Climb to Kuari Pass (3,820m) for sunrise over Nanda Devi. Descend to Khulara meadows (3,350m) via Lord Curzon\'s Trail.',
+        distance: '10km | 7-8 hours'
+      },
+      {
+        day: 5,
+        title: 'Khulara to Auli (Trek) to Joshimath (Drive)',
+        description: 'Gentle descent through forests to Auli (2,500m). Drive back to Joshimath. Celebration dinner.',
+        distance: '8km trek + 15km drive'
+      },
+      {
+        day: 6,
+        title: 'Joshimath to Rishikesh (Drive)',
+        description: 'Return drive to Rishikesh with stops at confluences. Trip concludes.',
+        distance: '250km drive'
+      }
+    ],
+    highlights: [
+      'Panoramic views of Nanda Devi (7,816m) - India\'s highest mountain',
+      'Walk the historic Lord Curzon\'s Trail through virgin forests',
+      'Sunrise at Kuari Pass with unobstructed Himalayan views',
+      'Moderate difficulty suitable for first-time trekkers',
+      'Chance to spot Himalayan monal (state bird of Uttarakhand)',
+      'Combine with visit to Auli ski resort (optional)'
+    ],
+    included: [
+      'All accommodation (guesthouses/camping)',
+      'All vegetarian meals during trek',
+      'Experienced local guides and support staff',
+      'Quality camping equipment (4-season tents, sleeping bags)',
+      'Trekking permits and forest fees',
+      'First aid kit and oxygen cylinder',
+      'Joshimath to Dhak transfers'
+    ],
+    notIncluded: [
+      'Transport to/from Rishikesh',
+      'Personal trekking gear',
+      'Travel insurance',
+      'Any meals during road journeys',
+      'Personal expenses',
+      'Auli cable car (optional)'
+    ],
+    gallery: [
+      '/images/gallery/kuari-1.jpg',
+      '/images/gallery/kuari-2.jpg',
+      '/images/gallery/kuari-3.jpg',
+      '/images/gallery/kuari-4.jpg',
+      '/images/gallery/kuari-5.jpg'
+    ],
+    notes: [
+      'Winter departures (Dec-Feb) require experience with snow trekking',
+      'Alternative route available via Gorson Bugyal for extended meadows experience',
+      'Best photography months: April-May (rhododendrons) & October-November (clear skies)',
+      'Can be combined with Auli winter ski package'
+    ]
+  }
 };
 
 export async function getTrekData(slug) {
