@@ -12,7 +12,7 @@ export const trekDetails = {
     rating: 4.8,
     groupSize: "4-12 people",
     price: "₹29,999",
-    image: "/images/treks/tapovan.jpg",
+    image: "/images/treks/gaumukh-tapovan/shivling-tapovan.jpg",
     itinerary: [
       {
         day: 1,
@@ -82,10 +82,10 @@ export const trekDetails = {
       "Anything not mentioned in inclusions",
     ],
     gallery: [
-      "/images/gallery/gaumukh-2.jpg",
-      "/images/gallery/gaumukh-3.jpg",
-      "/images/gallery/gaumukh-4.jpg",
-      "/images/gallery/gaumukh-5.jpg",
+      "/images/treks/gaumukh-tapovan/shivling-tapovan.jpg",
+      "/images/treks/gaumukh-tapovan/gaumukh-glacier.jpg",
+      "/images/treks/gaumukh-tapovan/tapovan-meadows.jpg",
+
     ],
   },
   "kedarkantha-trek": {
@@ -105,7 +105,7 @@ export const trekDetails = {
     rating: 4.7,
     groupSize: "4-12 people",
     price: "₹23,999",
-    image: "/images/treks/kedarkantha.jpg",
+    image: "/images/treks/kedarkantha/summit.jpg",
     itinerary: [
       {
         day: 1,
@@ -164,10 +164,10 @@ export const trekDetails = {
       "Any costs due to weather delays",
     ],
     gallery: [
-      "/images/gallery/kedarkantha-1.jpg",
-      "/images/gallery/kedarkantha-2.jpg",
-      "/images/gallery/kedarkantha-3.jpg",
-      "/images/gallery/kedarkantha-4.jpg",
+      "/images/treks/kedarkantha/summit.jpg",
+      "/images/treks/kedarkantha/juda-ka-talab.jpg",
+      "/images/treks/kedarkantha/base-camp.jpg",
+      "/images/treks/kedarkantha/snow-trail.jpg",
     ],
   },
   "kedartal-trek": {
@@ -257,6 +257,7 @@ export const trekDetails = {
       "/images/gallery/kedartal-1.jpg",
       "/images/gallery/kedartal-2.jpg",
       "/images/gallery/kedartal-3.jpg",
+      "/images/gallery/kedartal-4.jpg",
     ],
   },
   "kyarkoti-trek": {
@@ -272,7 +273,7 @@ export const trekDetails = {
     rating: 4.7,
     groupSize: "4-10 people",
     price: "₹24,999",
-    image: "/images/treks/kyarkoti.jpg",
+    image: "/images/treks/kyarkoti/lake-view.jpg",
     itinerary: [
       {
         day: 1,
@@ -346,9 +347,9 @@ export const trekDetails = {
       "Anything not mentioned in inclusions",
     ],
     gallery: [
-      "/images/gallery/kyarkoti-1.jpg",
-      "/images/gallery/kyarkoti-2.jpg",
-      "/images/gallery/kyarkoti-3.jpg",
+      "/images/treks/kyarkoti/lake-view.jpg",
+      "/images/treks/kyarkoti/valley-meadows.jpg",
+      "/images/treks/kyarkoti/harsil-forest.jpg",
     ],
   },
   "dayara-bugyal-trek": {
@@ -364,7 +365,7 @@ export const trekDetails = {
     rating: 4.6,
     groupSize: "4-12 people",
     price: "₹24,999",
-    image: "/images/treks/dayara-bugyal-trek-uttarakhand-himalayas-hero.webp",
+    image: "/images/treks/dayara-bugyal/meadows.jpg",
     itinerary: [
       {
         day: 1,
@@ -433,9 +434,10 @@ export const trekDetails = {
       "Anything not mentioned in inclusions",
     ],
     gallery: [
-      "/images/gallery/dayara-1.jpg",
-      "/images/gallery/dayara-2.jpg",
-      "/images/gallery/dayara-3.jpg",
+      "/images/treks/dayara-bugyal/meadows.jpg",
+      "/images/treks/dayara-bugyal/dayara-top.jpg",
+      "/images/treks/dayara-bugyal/gui-campsite.jpg",
+      "/images/treks/dayara-bugyal/winter-snow.jpg",
     ],
     whyChoose: [
       "Expert local guides",
@@ -630,10 +632,10 @@ export const trekDetails = {
       "Waterproof gear (unpredictable weather)"
     ],
     gallery: [
-      "/images/gallery/dodital-lake.jpg",
-      "/images/gallery/dodital-forest.jpg",
-      "/images/gallery/darwa-pass.jpg",
-      "/images/gallery/dodital-campsite.jpg"
+      "/images/treks/dodital/lake.jpg",
+      "/images/treks/dodital/forest.webp",
+      "/images/treks/dodital/darwa-pass.jpg",
+      "/images/treks/dodital/campsite.jpg"
     ]
   },
   "nandanvan-trek": {
